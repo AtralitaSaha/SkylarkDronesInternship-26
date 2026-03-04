@@ -50,3 +50,9 @@ The final model weights (`gcp_resnet18_weights_slim.pth`) are saved in **FP16 (H
 3. Execute **Section 3.1** to generate local crops (required for speed).
 4. Run the **Training Loop** (Section 5).
 5. Execute the **Inference Script** (Section 6) to generate the results.
+
+## 7. Limitations and Scope
+* **Class Focus:** The current model is optimized for **Square** and **Cross** markers only.
+* **Exclusion of L-shaped Markers:** While L-shaped markers were mentioned in the broader project description, they were excluded from this specific implementation. 
+* **Reasoning:** The available labeled training data for L-shaped markers was insufficient to guarantee statistical significance. Including a class with extremely low representation (below a viable threshold) often introduces "noise," which can degrade the model's overall precision for the primary classes. 
+* **Future Work:** Given more balanced data, the architecture can be easily scaled to a 3-class system.
